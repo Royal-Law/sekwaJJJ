@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sekwa JJJ Productions</title>
+    <meta name="description" content="Professional printing, photography, and video production in Botlokwa. Weddings, funerals, conferences, and branding — all at competitive prices.">
+    <meta name="keywords" content="Sekwa JJJ, printing, photography, video, Limpopo, Botlokwa, T-shirt printing, graphic design, sign boards">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+    <script src="script/tailwindscript.js"></script>
+</head>
+<body class="bg-black text-gray-200">
+    <!-- Navigation -->
+    <nav class="bg-black/90 backdrop-blur-md fixed w-full z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <a href="#home"><span class="text-primary-500 font-bold text-xl">SEKWA JJJ</span></a>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="#" class="nav-link text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                            <a href="#about" class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+                            <a href="#services" class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                            <a href="#portfolio" class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
+                            <a href="#contact" class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#contact" class="bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Get a Quote</a>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="nav-link text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#about" class="nav-link text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#services" class="nav-link text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#portfolio" class="nav-link text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
+                <a href="#contact" class="nav-link text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                <a href="#contact" class="bg-primary-500 hover:bg-primary-600 text-white block px-3 py-2 rounded-md text-base font-medium">Get a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div id="vanta-waves" class="absolute inset-0"></div>
+        <div class="hero-video absolute inset-0 z-10 flex items-center justify-center">
+            <div class="text-center px-4 sm:px-6 lg:px-8 max-w-4xl">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 animate-fade-in">Sekwa JJJ Productions</h1>
+                <p class="text-xl md:text-2xl text-primary-500 mb-8 animate-fade-in delay-100">Printing • Photography • Video</p>
+                <p class="text-lg md:text-xl text-gray-300 mb-12 animate-fade-in delay-200">"Capturing moments. Creating brands. Bringing your vision to life."</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in delay-300">
+                    <a href="#portfolio" class="bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-md font-medium transition duration-300">View Our Work</a>
+                    <a href="#contact" class="bg-transparent border border-primary-500 text-primary-500 hover:bg-primary-500/10 px-6 py-3 rounded-md font-medium transition duration-300">Get a Quote</a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center z-20">
+            <a href="#about" class="text-white animate-bounce">
+                <i data-feather="chevron-down" class="w-8 h-8"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">About Us</h2>
+                <div class="h-1 w-20 bg-primary-500 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="images/logo removed bg.webp" alt="Sekwa JJJ Team" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-gray-300 mb-6">
+                        Sekwa JJJ Productions is your trusted partner for creative printing, photography, and video services in Limpopo. 
+                        We bring your ideas to life — from event coverage to business branding — with professional quality and affordable pricing.
+                    </p>
+                    <p class="text-gray-300 mb-6">
+                        Based in Botlokwa, we serve clients throughout the Limpopo region with a commitment to excellence and customer satisfaction.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <i data-feather="award" class="text-primary-500 w-8 h-8 mb-2"></i>
+                            <h3 class="text-white font-medium mb-1">Professional Quality</h3>
+                            <p class="text-gray-400 text-sm">High-end equipment for stunning results</p>
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded-lg">
+                            <i data-feather="dollar-sign" class="text-primary-500 w-8 h-8 mb-2"></i>
+                            <h3 class="text-white font-medium mb-1">Affordable Pricing</h3>
+                            <p class="text-gray-400 text-sm">Competitive rates for all budgets</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Our Services</h2>
+                <div class="h-1 w-20 bg-primary-500 mx-auto"></div>
+                <p class="text-gray-400 max-w-2xl mx-auto mt-4">Comprehensive creative solutions for all your needs</p>
+            </div>
+
+            <!-- Service Categories -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Events & Shoots -->
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden shadow-lg transition duration-300">
+                    <div class="h-[90px] bg-gradient-to-r from-primary-500 to-yellow-600 flex items-center justify-center">
+                        <i data-feather="calendar" class="text-white w-10 h-10"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Events & Shoots</h3>
+                        <ul class="text-gray-400 space-y-2">
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-primary-500 w-4 h-4 mt-1 mr-2"></i>
+                                <span>Weddings</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-primary-500 w-4 h-4 mt-1 mr-2"></i>
+                                <span>Parties</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-primary-500 w-4 h-4 mt-1 mr-2"></i>
+                                <span>Funeral services</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-primary-500 w-4 h-4 mt-1 mr-2"></i>
+                                <span>Conferences & events</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-primary-500 w-4 h-4 mt-1 mr-2"></i>
+                                <span>Special photo shoots</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Photography & Video -->
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden shadow-lg transition duration-300">
+                    <div class="h-[90px] bg-gradient-to-r from-primary-500 to-yellow-600 flex items-center justify-center">
+                        <i data-feather="camera" class="text-white w-10 h-10"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Photography & Video</h3>
+                        <ul class="text-gray-400 space-y-2">
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-primary-500 w-4 h-4 mt-1 mr-2"></i>
+                                <span>Photo shoots (portraits, events)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-primary-500 w-4 h-4 mt-1 mr-2"></i>
+                                <span>Photo/wedding albums</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-primary-500 w-4 h-4 mt-1 mr-2"></i>
+                                <span>Video shoots & editing</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-primary-500 w-4 h-4 mt-1 mr-2"></i>
+                                <span>Drone footage</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-primary-500 w-4 h-4 mt-1 mr-2"></i>
+                                <span>Video mixer services</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Printing & Production -->
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden shadow-lg transition duration-300">
+                    <div class="h-[90px] bg-gradient-to-r from-primary-500 to-yellow-600 flex items-center justify-center">
+                        <i data-feather="printer" class="text-white w-10 h-10"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Printing & Production</h3>
+                        <ul class="text-gray-400 space-y-2">
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-primary-500 w-4 h-4 mt-1 mr-2"></i>
+                                <span>Digital printing</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-primary-500 w-4 h-4 mt-1 mr-2"></i>
+                                <span>Photo prints & photocopying</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-primary-500 w-4 h-4 mt-1 mr-2"></i>
+                                <span>CD/DVD printing</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-primary-500 w-4 h-4 mt-1 mr-2"></i>
+                                <span>Booklet & magazine printing</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-primary-500 w-4 h-4 mt-1 mr-2"></i>
+                                <span>T-shirt printing</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Design & Business Support -->
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden shadow-lg transition duration-300">
+                    <div class="h-[90px] bg-gradient-to-r from-primary-500 to-yellow-600 flex items-center justify-center">
+                        <i data-feather="layout" class="text-white w-10 h-10"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Design & Business Support</h3>
+                        <ul class="text-gray-400 space-y-2">
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-primary-500 w-4 h-4 mt-1 mr-2"></i>
+                                <span>Graphic designing</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-primary-500 w-4 h-4 mt-1 mr-2"></i>
+                                <span>ID photo shoots / ID cards</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-primary-500 w-4 h-4 mt-1 mr-2"></i>
+                                <span>Business registration & branding</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-primary-500 w-4 h-4 mt-1 mr-2"></i>
+                                <span>Website creation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-primary-500 w-4 h-4 mt-1 mr-2"></i>
+                                <span>Custom requests</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pricing Promise -->
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden shadow-lg transition duration-300 md:col-span-2">
+                    <div class="h-full bg-gradient-to-r from-primary-500 to-yellow-600 flex items-center justify-center p-6">
+                        <div class="text-center">
+                            <i data-feather="tag" class="text-white w-12 h-12 mb-4 mx-auto"></i>
+                            <h3 class="text-xl font-bold text-white mb-2">Our Pricing Promise</h3>
+                            <p class="text-white mb-4">We offer competitive pricing and will match or beat any written quote.</p>
+                            <a href="#contact" class="inline-block bg-black hover:bg-gray-900 text-white px-6 py-2 rounded-md font-medium transition duration-300">Get Your Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <!-- Portfolio Section -->
+<section id="portfolio" class="py-20 bg-gray-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold text-white mb-4">Our Portfolio</h2>
+      <div class="h-1 w-20 bg-primary-500 mx-auto"></div>
+      <p class="text-gray-400 max-w-2xl mx-auto mt-4">Click any category to view all our work</p>
+    </div>
+
+    <!-- Category Thumbnails (only 1 image per category) -->
+    <div id="category-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Will be filled dynamically by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- Hidden container for Lightbox2 (all images go here) -->
+<div id="lightbox-gallery" style="display:none;"></div>
+
+<!-- jQuery + Lightbox2 (fixed order) -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+        crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Contact Us</h2>
+                <div class="h-1 w-20 bg-primary-500 mx-auto"></div>
+                <p class="text-gray-400 max-w-2xl mx-auto mt-4">Get in touch to discuss your project or request a quote</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-900 rounded-lg shadow-lg p-8 h-full">
+                        <h3 class="text-xl font-bold text-white mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-primary-500/20 p-3 rounded-full mr-4">
+                                    <i data-feather="phone" class="text-primary-500 w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-white mb-3">Phone</h4>
+                                    <div class="space-y-2">
+                                        <a href="tel:+27722012696" class="block text-gray-400 hover:text-primary-500 hover:underline transition-all duration-300">
+                                            +27 72 2012 696
+                                        </a>
+                                        <a href="tel:+27649819910" class="block text-gray-400 hover:text-primary-500 hover:underline transition-all duration-300">
+                                            +27 64 981 9910
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary-500/20 p-3 rounded-full mr-4">
+                                    <i data-feather="mail" class="text-primary-500 w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-white">Email</h4>
+                                    <a href="mailto:sekwajjj@gmail.com" class="text-gray-400 hover:text-primary-500 hover:underline transition-all duration-300 block">
+                                        sekwajjj@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary-500/20 p-3 rounded-full mr-4">
+                                    <i data-feather="map-pin" class="text-primary-500 w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-white">Location</h4>
+                                    <p  class="text-gray-400">Limpopo, Botlokwa</p>
+                                    <p class="text-gray-400">(Red Vodacom Container, Botlokwa Complex — next to Modau) </p> 
+                                    <a href="#map" class="bg-gradient-to-r from-primary-500 to-yellow-600 bg-clip-text text-transparent hover:from-yellow-600 hover:to-primary-500 transition-all duration-300 font-medium">click here</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary-500/20 p-3 rounded-full mr-4">
+                                    <i data-feather="clock" class="text-primary-500 w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-white">Business Hours</h4>
+                                    <p class="text-gray-400">Monday - Sunday: 8AM - 6PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-medium text-white mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://www.facebook.com/profile.php?id=100054717762057" target="_blank" class="bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition duration-300">
+                                    <i data-feather="facebook" class="text-primary-500 w-5 h-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-900 rounded-lg shadow-lg p-8">
+                        <h3 class="text-xl font-bold text-white mb-6">Send Us a Message</h3>
+                        <form name="contact" method="POST" data-netlify="true" class="space-y-4">
+    <div>
+        <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Your Name</label>
+        <input type="text" id="name" name="name" required class="w-full bg-gray-800 border border-gray-700 text-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+    </div>
+    
+    <div>
+        <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
+        <input type="email" id="email" name="email" required class="w-full bg-gray-800 border border-gray-700 text-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+    </div>
+    
+    <div>
+        <label for="phone" class="block text-sm font-medium text-gray-300 mb-1">Phone Number</label>
+        <input type="tel" id="phone" name="phone" class="w-full bg-gray-800 border border-gray-700 text-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+    </div>
+    
+    <div>
+        <label for="service" class="block text-sm font-medium text-gray-300 mb-1">Service Interested In</label>
+        <select id="service" name="service" required class="w-full bg-gray-800 border border-gray-700 text-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+            <option value="" disabled selected>Select a service</option>
+            <option value="photography">Photography</option>
+            <option value="videography">Videography</option>
+            <option value="printing">Printing</option>
+            <option value="design">Graphic Design</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    
+    <div>
+        <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Your Message</label>
+        <textarea id="message" name="message" rows="4" required class="w-full bg-gray-800 border border-gray-700 text-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"></textarea>
+    </div>
+    
+    <!-- Hidden field (Netlify auto-adds this, but you can include it manually if needed) -->
+    <input type="hidden" name="form-name" value="contact">
+    
+    <button type="submit" class="w-full bg-primary-500 hover:bg-primary-600 text-white font-medium py-2 px-4 rounded-md transition duration-300">Send Message</button>
+</form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div id="map" class="h-96 w-full bg-gray-900 relative">
+        <div id="map-loading" class="absolute inset-0 flex items-center justify-center bg-gray-900 text-white">
+            <span>Loading location...</span>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white font-bold text-xl mb-4">SEKWA JJJ PRODUCTIONS</h3>
+                    <p class="mb-4">Professional printing, photography, and video production services in Limpopo.</p>
+                    <p>Bringing your vision to life with quality and creativity.</p>
+                </div>
+                
+                
+                <div>
+                    <h4 class="text-white font-medium mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-primary-500 transition duration-300">Photography</a></li>
+                        <li><a href="#" class="hover:text-primary-500 transition duration-300">Videography</a></li>
+                        <li><a href="#" class="hover:text-primary-500 transition duration-300">Printing</a></li>
+                        <li><a href="#" class="hover:text-primary-500 transition duration-300">Graphic Design</a></li>
+                        <li><a href="#" class="hover:text-primary-500 transition duration-300">Business Branding</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-6 pb-4 justify-between items-center">
+                <div class="flex items-center text-sm">
+                    <span class="text-gray-400 text-xs">Website developed by <span class="hover:text-primary-500 transition duration-300 font-medium">王 Ｌａｗ </span><br> Need a professional website? <a href="https://royallaw.netlify.app" target="_blank" 
+                    class="text-primary-500 transition duration-300 font-medium">
+                        click here
+                    </a></span>
+                    
+                </div><br>
+                <p class="text-gray-400 text-xs">© 2025 Sekwa JJJ Productions. All Rights Reserved.</p><br>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/27649819910"
+    class="whatsapp-float fixed bottom-6 right-6 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 z-50 group" 
+    target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M16 31C23.732 31 30 24.732 30 17C30 9.26801 23.732 3 16 3C8.26801 3 2 9.26801 2 17C2 19.5109 2.661 21.8674 3.81847 23.905L2 31L9.31486 29.3038C11.3014 30.3854 13.5789 31 16 31ZM16 28.8462C22.5425 28.8462 27.8462 23.5425 27.8462 17C27.8462 10.4576 22.5425 5.15385 16 5.15385C9.45755 5.15385 4.15385 10.4576 4.15385 17C4.15385 19.5261 4.9445 21.8675 6.29184 23.7902L5.23077 27.7692L9.27993 26.7569C11.1894 28.0746 13.5046 28.8462 16 28.8462Z" fill="#BFC8D0"></path> <path d="M28 16C28 22.6274 22.6274 28 16 28C13.4722 28 11.1269 27.2184 9.19266 25.8837L5.09091 26.9091L6.16576 22.8784C4.80092 20.9307 4 18.5589 4 16C4 9.37258 9.37258 4 16 4C22.6274 4 28 9.37258 28 16Z" fill="url(#paint0_linear_87_7264)"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2C8.26801 2 2 8.26801 2 16C2 18.5109 2.661 20.8674 3.81847 22.905L2 30L9.31486 28.3038C11.3014 29.3854 13.5789 30 16 30ZM16 27.8462C22.5425 27.8462 27.8462 22.5425 27.8462 16C27.8462 9.45755 22.5425 4.15385 16 4.15385C9.45755 4.15385 4.15385 9.45755 4.15385 16C4.15385 18.5261 4.9445 20.8675 6.29184 22.7902L5.23077 26.7692L9.27993 25.7569C11.1894 27.0746 13.5046 27.8462 16 27.8462Z" fill="white"></path> <path d="M12.5 9.49989C12.1672 8.83131 11.6565 8.8905 11.1407 8.8905C10.2188 8.8905 8.78125 9.99478 8.78125 12.05C8.78125 13.7343 9.52345 15.578 12.0244 18.3361C14.438 20.9979 17.6094 22.3748 20.2422 22.3279C22.875 22.2811 23.4167 20.0154 23.4167 19.2503C23.4167 18.9112 23.2062 18.742 23.0613 18.696C22.1641 18.2654 20.5093 17.4631 20.1328 17.3124C19.7563 17.1617 19.5597 17.3656 19.4375 17.4765C19.0961 17.8018 18.4193 18.7608 18.1875 18.9765C17.9558 19.1922 17.6103 19.083 17.4665 19.0015C16.9374 18.7892 15.5029 18.1511 14.3595 17.0426C12.9453 15.6718 12.8623 15.2001 12.5959 14.7803C12.3828 14.4444 12.5392 14.2384 12.6172 14.1483C12.9219 13.7968 13.3426 13.254 13.5313 12.9843C13.7199 12.7145 13.5702 12.305 13.4803 12.05C13.0938 10.953 12.7663 10.0347 12.5 9.49989Z" fill="white"></path> <defs> <linearGradient id="paint0_linear_87_7264" x1="26.5" y1="7" x2="4" y2="28" gradientUnits="userSpaceOnUse"> <stop stop-color="#5BD066"></stop> <stop offset="1" stop-color="#27B43E"></stop> </linearGradient> </defs> </g></svg>
+    </a>
+
+    <script src="script/script.js"></script>
+    <script src="script/feather.js"></script>
+</body>
+</html>
