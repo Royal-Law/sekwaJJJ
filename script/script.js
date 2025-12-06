@@ -131,6 +131,8 @@ async function loadPortfolio() {
   } catch (error) {
     console.error('Error loading portfolio:', error);
   }
+  
+  feather.replace();
 }
 
 function openCategoryLightbox(category, images) {

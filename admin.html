@@ -42,83 +42,111 @@
 
     <!-- List of Uploaded Images with Delete Buttons -->
     <div class="bg-gray-900 p-8 rounded-lg shadow-xl">
-      <h2 class="text-2xl font-bold mb-6">Uploaded Images (click 🧅 to delete)</h2>
+      <h2 class="text-2xl font-bold mb-6">Uploaded Images</h2>
       <div id="imageList" class="grid grid-cols-2 md:grid-cols-3 gap-6">
         <!-- Images load here -->
       </div>
     </div>
   </div>
-
   <script>
-    const API_KEY = prompt("Enter Admin API Key:"); // Keep for now, upgrade to login later
+  let API_KEY = null;
 
-    // Load all images
-    async function loadImages() {
+  // Ask for the key ONCE
+  while (true) {
+    API_KEY = prompt("Enter Admin API Key:");
+    if (API_KEY === null) {
+      // User clicked Cancel
+      document.body.innerHTML = "<h1 class='text-center text-red-600 text-4xl mt-40'>Access Denied</h1>";
+      throw new Error("Access cancelled");
+    }
+    if (API_KEY.trim() !== "") break; // Accept any non-empty key (real validation happens on server)
+    alert("Please enter a key!");
+  }
+
+  // Load images — this endpoint is public, so it always works
+  async function loadImages() {
+    const list = document.getElementById('imageList');
+    list.innerHTML = '<p class="text-center col-span-full py-10">Loading...</p>';
+
+    try {
       const res = await fetch('/.netlify/functions/images');
       const images = await res.json();
-      const list = document.getElementById('imageList');
+
       list.innerHTML = '';
+
+      if (images.length === 0) {
+        list.innerHTML = '<p class="text-center col-span-full py-10 text-gray-400">No images uploaded yet.</p>';
+        return;
+      }
 
       images.forEach(img => {
         const div = document.createElement('div');
         div.className = 'relative group';
         div.innerHTML = `
-          <img src="${img.url}" alt="${img.alt_text}" class="w-full h-48 object-cover rounded-lg">
+          <img src="${img.url}" alt="${img.alt_text || 'No alt text'}" class="w-full h-48 object-cover rounded-lg">
           <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition rounded-lg flex items-center justify-center">
             <button onclick="deleteImage(${img.id})" 
-                    class="bg-red-600 hover:bg-red-800 text-white p-3 rounded-full shadow-lg hover:scale-110 transition">
-            <i data-feather="trash-2" class="w-6 h-6"></i>
+                    class="bg-red-600 hover:bg-red-800 text-white p-4 rounded-full shadow-xl hover:scale-110 transition">
+              <i data-feather="trash-2" class="w-7 h-7"></i>
             </button>
           </div>
-          <p class="text-center mt-2 text-sm text-gray-400">${img.category} • ${img.alt_text || 'No alt'}</p>
+          <p class="text-center mt-3 text-sm text-gray-400 truncate">${img.category} • ${img.alt_text || 'No description'}</p>
         `;
         list.appendChild(div);
       });
+
+      feather.replace(); // This makes the trash icon appear
+    } catch (err) {
+      list.innerHTML = '<p class="text-red-500 text-center col-span-full">Failed to load images</p>';
     }
+  }
 
-    // Delete function
-    async function deleteImage(id) {
-      if (!confirm("Delete this image forever?")) return;
+  // Delete — server checks the real key
+  async function deleteImage(id) {
+    if (!confirm("Delete this image permanently?")) return;
 
-      const res = await fetch('/.netlify/functions/delete', {
-        method: 'POST',
-        headers: { Authorization: `Bearer ${API_KEY}` },
-        body: JSON.stringify({ id })
-      });
-
-      if (res.ok) {
-        alert("Image deleted!");
-        loadImages();
-      } else {
-        alert("Delete failed");
-      }
-    }
-
-    // Upload form
-    document.getElementById('uploadForm').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const formData = new FormData(e.target);
-      const res = await fetch('/.netlify/functions/upload', {
-        method: 'POST',
-        headers: { Authorization: `Bearer ${API_KEY}` },
-        body: formData
-      });
-
-      const status = document.getElementById('status');
-      if (res.ok) {
-        status.textContent = "Upload successful!";
-        status.className = "text-green-500";
-        e.target.reset();
-        loadImages();
-      } else {
-        status.textContent = "Upload failed: " + await res.text();
-        status.className = "text-red-500";
-      }
+    const res = await fetch('/.netlify/functions/delete', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${API_KEY}` },
+      body: JSON.stringify({ id })
     });
 
-    // Auto-load images on open
-    loadImages();
-  </script>
+    if (res.ok) {
+      alert("Image deleted!");
+      loadImages();
+    } else {
+      alert("Delete failed — wrong API key or server error");
+    }
+  }
+
+  // Upload — server checks the real key
+  document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+
+    const res = await fetch('/.netlify/functions/upload', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${API_KEY}` },
+      body: formData
+    });
+
+    const status = document.getElementById('status');
+    if (res.ok) {
+      status.textContent = "Upload successful!";
+      status.className = "mt-4 text-center font-medium text-green-500";
+      e.target.reset();
+      loadImages();
+    } else {
+      const error = await res.text();
+      status.textContent = "Upload failed — " + (error.includes("Unauthorized") ? "wrong API key" : error);
+      status.className = "mt-4 text-center font-medium text-red-500";
+    }
+  });
+
+  // Start loading images only after key is entered
+  loadImages();
+</script>
+
     <script>
         feather.replace(); // Re-initialize icons after dynamic content
     </script>
